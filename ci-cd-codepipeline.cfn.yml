@@ -48,7 +48,7 @@ Parameters:
 
   CodeBuildDockerImage:
     Type: String
-    Default: aws/codebuild/docker:17.09.0
+    Default: aws/codebuild/standard4.0
     Description: AWS CodeBuild Docker optimized image
     MinLength: 3
     MaxLength: 100
@@ -87,9 +87,9 @@ Metadata:
           - EksClusterName
     ParameterLabels:
       GitHubUser:
-        default: Andi2803
+        default: Username
       GitHubToken:
-        default: paste ur token
+        default: Access token
       GitSourceRepo:
         default: Repository
       GitBranch:
@@ -99,7 +99,7 @@ Metadata:
       KubectlRoleName:
         default: kubectl IAM role
       EksClusterName:
-        default: project-cluster
+        default: EKS cluster name
 
 
 Resources:
